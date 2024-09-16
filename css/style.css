@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* stylisation du header */
+
+.navbar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(26, 43, 222);
+    padding: 10px;
+}
+
+/* stylisation du mobile first */
+.mobile-first {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* stylisation du bouton menu */
+
+.bouton {
+    padding: 0 30px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+
+.bouton:focus{
+    cursor: pointer;
+    border: 2px solid #fdfdfd;
+
+}
+
+/* Styliastion du logo */
+
+.logo h3{
+    color: orange;
+    margin: 20px 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+/* stylisationd des liens  */
+
+.liens {
+    padding: 5px;
+    margin: 0 20px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color : white;
+    text-decoration: none;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    margin-right: 20px;
+
+}
+
+a:hover{
+    color: orange;
+    transition: 2s;
+}
+
+@media(max-width : 768px) {
+    .navbar-1{
+        display: block;
+    }
+
+    .bouton {
+        display: block;
+        margin-right: 5px;
+    }
+
+    .liens {
+        display: none;
+    }
+
+    .liens ul {
+        display: block;
+    }
+
+    .liens ul li {
+        padding: 5px;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+
+    .col-lg-3 :hover{
+        box-shadow: 1px 1px 5px rgba(10, 226, 255, 0.452);
+    }
+
+    .detail .infos-produit .card-header {
+        display: none;
+    }
+
+}
+
+/* Stylisationdu banniere de nptre page 1 */
+
+.banniere {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image:linear-gradient(rgba(115, 115, 115, 0.178),rgba(72, 71, 71, 0.152),rgba(102, 99, 99, 0.638),rgba(110, 110, 110, 0.75)), url(../img/banniere-2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.titre , .texte {
+    display: flex;
+    justify-content: center ;
+}
+
+.titre {
+    margin-top: 6px ;
+}
+
+.titre h1 {
+    font-size: 30px;
+    color: rgb(0, 47, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.titre h1 span {
+    color: orange;
+}
+
+
+.texte p {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/*Stylisation de la section prduits sur la page 1 */
+.achat {
+    background-color: rgba(108, 107, 107, 0.282);
+}
+
+
+.achat .container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.achat .container .card {
+    border-top: 5px solid blue ;
+}
+
+.achat h1 {
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+/* Stylisation du bloc Détail de produits */
+
+.detail .col-lg-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail .col-lg-12 h1 {
+    font-size: 35px;
+    color: rgb(0, 47, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    text-align: center;
+}
+
+.detail .col-lg-12 .card{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+
+/* Stylisation de la section acheter de la page 1 */
+
+.acheter {
+    background-color: rgba(108, 107, 107, 0.282);
+    padding: 30px;
+    margin: 20px ;
+}
+
+.acheter .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+/* .acheter .col-lg-4 .card {
+    /* background-image: linear-gradient(rgba(139, 133, 133, 0.38),rgba(121, 118, 118, 0.61)); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+} */
+
+.acheter .col-lg-4 .card-body {
+    display :flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+/* .acheter.col-lg-4 .card {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+/* Stylisation de la partie footer */
+
+.footer {
+    display: flex;
+    background-color: black;
+}
+
+.footer .col-lg-4 .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .col-lg-4 .lien-pages ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .col-lg-4 .titre-footer h3 {
+    color:rgb(236, 139, 5);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+.lien-pages ul li {
+    text-shadow: 1px 1px 1px white;
+    text-align: center;
+}
+
+.lien-pages ul li a {
+    color:blue;
+}
+
+/* Page 2 du site */
+
+.banniere-2 {
+    background-color: rgba(243, 214, 177, 0.294);
+    height: 300px;
+    padding: 60px;
+}
+
+.banniere-2 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banniere-2 .row .col-lg-12 {
+    border: 1px solid #0000000b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.banniere-2 .row .col-lg-6 h1 {
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.banniere-2 .row .col-lg-6 p {
+    font-size: 15px;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* partie article de la page 2 */
+
+.articles .container .row {
+    background-color: rgba(149, 148, 146, 0.618);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.articles h2 {
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.articles .card {
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);
+    padding: 20px;
+    border-top-color: rgba(0, 0, 0, 0);
+    /* border: 1px solid #000; */
+    background-color: #ffffff;
+}
+
+/* partie formulaire */
+
+.formulaire {
+    padding: 30px;
+}
+
+.formulaire .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #c9c9c9d5;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.formulaire .col-lg-8 form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00000000;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+input[type="text"] {
+    border: none;
+    margin: 20px 1px;
+    padding: 5px;
+    text-align: center;
+    height: 40px;
+}
+
+label{
+    margin-top: 10px;
+    font-weight: bold;
+    margin: 20px 1px;
+    padding: 5px;
+}
+
+
+
+/* Partie media pour mobile */
+
+
+
+    
+
+@media(max-width : 768px) {
+
+    .banniere-2 .row {
+        display:flex
+    }
+
+    .banniere-2 .row .col-lg-12 {
+        border: 1px solid #00000023;
+        box-shadow: 0 5px rgba(177, 177, 177, 0.206);
+    }
+
+    .banniere-2 .row .col-lg-6 p {
+        margin-top: 19px;
+    }
+
+    .articles .container .row {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    
+}
+
+/* page 3 */
+
+/* detail du produit */
+
+.detail .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.detail .container {
+    padding: 20px;
+}
+
+.detail .container .card {
+    padding: 5px;
+}
+
+
+/* main .img {
+    background-color: rgba(158, 155, 155, 0.078);
+    border-radius: 10px;
+    border: 1px solid rgba(158, 155, 155, 0.264);
+}
+
+main section img {
+    width: 400px;
+}
+
+main .detail {
+    background-color: rgba(158, 155, 155, 0.078);
+    border-radius: 10px;
+    border: 1px solid rgba(158, 155, 155, 0.264);
+}
+
+main .prix {
+    background-color: rgba(158, 155, 155, 0.078);
+    border-radius: 10px;
+    border: 1px solid rgba(158, 155, 155, 0.264);
+}
+
+main section span {
+    color: gray;
+    text-decoration: line-through;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+main .cadre {
+    margin-left: 98px;
+}
+
+main .cadre img {
+    width: 80px;
+    padding: 10px;
+    background-color: rgba(158, 155, 155, 0.078);
+    border-radius: 5px;
+    border: 1px solid rgba(158, 155, 155, 0.264);
+} */

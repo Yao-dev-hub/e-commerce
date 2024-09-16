@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <!-- Insertion du Bootstrap css -->
+     <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- Insertion de style css personnalisé -->
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="navbar-1">
+        <div class="mobile-first">
+            <div class="logo">
+                <h3>Ivoire-Shop</h3>
+            </div>
+            <button class="bouton" onclick="AfficheMenu()">
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+            </button>
+        </div>
+        <div class="liens">
+            <ul>
+                <li><a href="indexhtml">ACCUEIL</a></li>
+                <li><a href="achat.html">ACHAT</a></li>
+                <li><a href="inventaire.html">INVENTAIRE</a></li>
+                <li><a href="detail.html">DETAIL</a></li>
+                <li><a href="produits.html">PRODUITS</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="banniere">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="titre"><h1>Bienvenu sur <span>Ivoire-Shop</span></h1></div>
+                    <div class="texte">
+                        <p>Découvrez tout ce dont vous avez besoin pour votre cuisine ici</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Insertion de 4 cards pour une brieve presnetation de nos produits  -->
+    <section class="achat">
+        <div class="container">
+            <div class="row">
+                <h1>Visiter tous nos produits disponibles</h1>
+            </div>
+            <div class="row py-5">
+                <div class="col-lg-3">
+                    <div class="card pt-5">
+                        <div class="card-body">
+                            <h2>fruits</h2>
+                            <p>Découvrez nos fruits à un prix abordable</p>
+                            <button type="button" class="btn btn-info">voir plus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card pt-5">
+                        <div class="card-body">
+                            <h2>Légumes</h2>
+                            <p>Découvrez nos fruits à un prix abordable</p>
+                            <button type="button" class="btn btn-info">voir plus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card pt-5">
+                        <div class="card-body">
+                            <h2>Produits Laitiers</h2>
+                            <p>Découvrez nos fruits à un prix abordable</p>
+                            <button type="button" class="btn btn-info">voir plus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card pt-5">
+                        <div class="card-body">
+                            <h2>Viandes</h2>
+                            <p>Découvrez nos fruits à un prix abordable</p>
+                            <button type="button" class="btn btn-info">voir plus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Création de la partie detail du produit dur la page d'accueil -->
+     <section class="detail">
+        <div class="container">
+            <div class="row">
+                <!-- Déclaration d'une colonne qui va occupée toute la ligne de la page -->
+                <div class="col-lg-12">
+                    <!-- Titre de la section centré -->
+                    <h1>Découvrez toutes les informations sur chaque produit</h1>
+
+                    <!-- déclaration de container produits qui va contenir  une ligne composée de 2 colonnes -->
+                    <div class="infos-produit">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2>Produits X</h2>
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3>Détails du produits X</h3>
+                                        <p>Nom : produits X</p>
+                                        <p>type : type de produits</p>
+                                        <p>Prix unitaire : xxx fcfa</p>
+                                        <p>Réductiuon : 7%</p>
+                                        <p>Condition de réduction : si quantité de produits est supérieur à 10</p>
+                                        <p>Quantité d'achat : x</p>
+                                        <p>Quantité restant : x</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+                
+            </div>
+        </div>
+     </section>
+     <!-- Création de la section acheter -->
+    <section class="acheter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="background-image: url(./img/banniere.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;width: 180px; height: 250px;">
+                        <!-- insertion de l'image de produits -->
+                        <div class="card-body">
+                            <!-- Créationdu bouton achter -->
+                            <button type="button" class="btn btn-warning">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card" style="background-image: url(./img/banniere.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;width: 180px; height: 250px;">
+                        <!-- insertion de l'image de produits -->
+                        <div class="card-body">
+                            <!-- Créationdu bouton achter -->
+                            <button type="button" class="btn btn-warning">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card" style="background-image: url(./img/banniere.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;width: 180px; height: 250px;">
+                        <!-- insertion de l'image de produits -->
+                        <div class="card-body">
+                            <!-- Créationdu bouton achter -->
+                            <button type="button" class="btn btn-warning">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- insertion de du footer -->
+     <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <h3>Ivoire-Shop</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="titre-footer">
+                        <h3>Nos réseaux sociaux</h3>
+                    </div>
+                    <div class="reseaux">
+                        <!-- insertion des icones réseaux -->
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="titre-footer">
+                        <h3>Liens rapides de la page</h3>
+                    </div>
+                    <div class="lien-pages">
+                        <!-- insertion des icones réseaux -->
+                        <ul>
+                            <li><a href="indexhtml">ACCUEIL</a></li>
+                            <li><a href="achat.html">ACHAT</a></li>
+                            <li><a href="inventaire.html">INVENTAIRE</a></li>
+                            <li><a href="detail.html">DETAIL</a></li>
+                            <li><a href="produits.html">PRODUITS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Insertion du bootstrp js -->
+     <script src="./js/bootstrap.bundle.js"></script>
+    <!-- insertion du fichier personnalisé js -->
+     <script src="./js/main.js" type="module"></script>
+</body>
+</html>
