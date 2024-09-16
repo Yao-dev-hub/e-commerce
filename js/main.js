@@ -1,73 +1,151 @@
-// Déclaration de la variable de vérification pour savoir le bouton est cliqué ou non cliqué
-// par défaut on initialise le bouton à false ; c'est à dire par encore cliqué
+(function ($) {
+    "use strict";
 
-let btnClicked = "pas cliqué";
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner(0);
 
-// selecion du container liens
 
-let menuBtn = document.querySelector(".liens");
-
-const AfficheMenu = () => {
-
-    if(btnClicked === "pas cliqué"){
-
-        menuBtn.style.display = "block";
-        btnClicked = "cliqué";
-    }else {
-
-        menuBtn.style.display = "none";
-        btnClicked = "pas cliqué";
+    // Fixed Navbar
+    $(window).scroll(function () {
+        if ($(window).width() < 992) {
+            if ($(this).scrollTop() > 55) {
+                $('.fixed-top').addClass('shadow');
+            } else {
+                $('.fixed-top').removeClass('shadow');
+            }
+        } else {
+            if ($(this).scrollTop() > 55) {
+                $('.fixed-top').addClass('shadow').css('top', -55);
+            } else {
+                $('.fixed-top').removeClass('shadow').css('top', 0);
+            }
+        } 
+    });
+    
+    
+   // Back to top button
+   $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
     }
-}
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+
+    // Testimonial carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 2000,
+        center: false,
+        dots: true,
+        loop: true,
+        margin: 25,
+        nav : true,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            992:{
+                items:2
+            },
+            1200:{
+                items:2
+            }
+        }
+    });
+
+
+    // vegetable carousel
+    $(".vegetable-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        center: false,
+        dots: true,
+        loop: true,
+        margin: 25,
+        nav : true,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
+
+
+    // Modal Video
+    $(document).ready(function () {
+        var $videoSrc;
+        $('.btn-play').click(function () {
+            $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
+
+        $('#videoModal').on('shown.bs.modal', function (e) {
+            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        })
+
+        $('#videoModal').on('hide.bs.modal', function (e) {
+            $("#video").attr('src', $videoSrc);
+        })
+    });
 
 
 
-// IMPORTION DE TOUTES LES DIFFERENTES MODULES DE NOTRE SITE
+    // Product Quantity
+    $('.quantity button').on('click', function () {
+        var button = $(this);
+        var oldValue = button.parent().parent().find('input').val();
+        if (button.hasClass('btn-plus')) {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 0;
+            }
+        }
+        button.parent().parent().find('input').val(newVal);
+    });
 
-// Importation de la fonction contenant le header
-import { MenuSite } from "./menu.js";
+})(jQuery);
 
-let menus = MenuSite()
-console.log(menus)
-
-// Importation de la fonction contenant le footer
-
-import { FooterSite } from "./footer.js";
-let footers = FooterSite();
-console.log(footers);
-
-// Importation du module RecupeSaisi
-
-import { RecupeSaisi } from "./recupSaisie.js";
-
-RecupeSaisi()
-
-const detailProduit = () => {
-    let detailBloc = document.querySelector(".bloc-detail") ;
-    if(detailBloc){
-        detailBloc.innerHTML = `
-            <div class="col-lg-3 bloc-detail">
-                    <div class="card p-4">
-                        <div class="card-header">
-                            <h4>Détails du produits</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Nom : produits X</p>
-                            <p>type : type de produits</p>
-                            <p>Prix unitaire : xxx fcfa</p>
-                            <p><em>Condition de réduction : si quantité de produits est supérieur à 10</em></p>
-                            <p>Quantité d'achat : x</p>
-                            <p>Quantité restant : x</p>
-                            <ol>
-                                <li>Date de création</li>
-                                <li>Date d'expiration</li>
-                                <li>xxxxxxxxxxxxxx</li>
-                                <li>xxxxxxxxxxxxxx</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-        
-        `
-    }
-}
